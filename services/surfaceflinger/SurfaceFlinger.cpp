@@ -1871,10 +1871,10 @@ void SurfaceFlinger::calculateWorkingSet() {
 
             for (auto& layer : display->getOutputLayersOrderedByZ()) {
                 auto& compositionState = layer->editState();
-                compositionState.forceClientComposition = false;
-                if (!compositionState.hwc || mDebugDisableHWC || mDebugRegion) {
+                //compositionState.forceClientComposition = false;
+                //if (!compositionState.hwc || mDebugDisableHWC || mDebugRegion) {
                     compositionState.forceClientComposition = true;
-                }
+                //}
 
                 // The output Z order is set here based on a simple counter.
                 compositionState.z = zOrder++;
