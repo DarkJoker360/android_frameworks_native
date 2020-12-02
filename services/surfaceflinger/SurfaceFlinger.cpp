@@ -2085,7 +2085,7 @@ void SurfaceFlinger::onMessageRefresh() {
         mDrawingState.colorMatrixChanged = false;
     }
 
-    refreshArgs.devOptForceClientComposition = mDebugDisableHWC || mDebugRegion;
+    refreshArgs.devOptForceClientComposition = true;
 
     if (mDebugRegion != 0) {
         refreshArgs.devOptFlashDirtyRegionsDelay =
